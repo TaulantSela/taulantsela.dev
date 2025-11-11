@@ -1,3 +1,4 @@
+import { DeprecationBanner } from '@/components/deprecation-banner';
 import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+            <DeprecationBanner />
             <Navigation />
             <main className="flex flex-1 flex-col">{children}</main>
             <Footer />
